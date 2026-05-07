@@ -79,7 +79,7 @@ set(gca,'XTickLabel',thresh);%[500:-50:5]);
 ylabel('Production rate');
 xlabel('Cross-repression threshold')
 title('Half-life 20min')
-h=colorbar; set(h,'Limits',[0,1]);
+colorbar, clim([0,1]);
 subplot(1,3,2),imagesc(flipud(auc40))
 set(gca,'YTick',[1:numel(values)]);
 set(gca,'YTickLabel',[5:-0.25:0]);
@@ -88,7 +88,7 @@ set(gca,'XTickLabel',thresh);%[500:-50:5]);
 ylabel('Production rate');
 xlabel('Cross-repression threshold')
 title('Half-life 40min')
-h=colorbar; set(h,'Limits',[0,1]);
+colorbar, clim([0,1]);
 subplot(1,3,3),imagesc(flipud(auc80))
 set(gca,'YTick',[1:numel(values)]);
 set(gca,'YTickLabel',[5:-0.25:0]);
@@ -97,7 +97,7 @@ set(gca,'XTickLabel',thresh);%[500:-50:5]);
 ylabel('Production rate');
 xlabel('Cross-repression threshold')
 title('Half-life 80min')
-h=colorbar; set(h,'Limits',[0,1]);
+colorbar, clim([0,1]);
 colormap bone
 function dydt=ddePM_coupled(t,y,Z,par)
 % HES1
